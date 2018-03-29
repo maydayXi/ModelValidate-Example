@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbStudentModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tStudent">
+    <Key>
+      <PropertyRef Name="fStuId" />
+    </Key>
+    <Property Name="fStuId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fName" Type="nvarchar" MaxLength="50" />
+    <Property Name="fEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="fScore" Type="int" />
+  </EntityType>
+  <EntityContainer Name="dbStudentModelStoreContainer">
+    <EntitySet Name="tStudent" EntityType="Self.tStudent" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
